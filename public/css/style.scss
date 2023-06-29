@@ -1,0 +1,395 @@
+@import "./variable.scss";
+body {
+    font-family: "Roboto", sans-serif;
+}
+// BANNER
+.banner {
+    height: 160px;
+    padding: 5px;
+    .right-banner {
+        overflow: hidden;
+        img {
+            border-radius: 5px;
+            width: 100%;
+            height: 150px;
+            // object-fit: cover;
+        }
+    }
+}
+// END BANNER
+// NAVBAR
+.navbar {
+    background-color: $primary-color !important;
+    padding: 0px !important;
+    .navbar-brand {
+        font-size: medium !important;
+    }
+    .navbar-toggler-icon {
+        color: white !important;
+        background-color: white !important;
+    }
+    a {
+        color: $text-color !important;
+        padding: 15px !important;
+        transition: all 0.15s;
+        i {
+            margin-right: 10px !important;
+            color: $seconday-color;
+        }
+        &:hover {
+            background-color: rgba($color: $seconday-color, $alpha: 0.5);
+        }
+    }
+    .active {
+        background-color: $seconday-color;
+        i {
+            color: $primary-color;
+        }
+    }
+    .dropdown-menu {
+        background-color: $primary-color !important;
+        a {
+            &:hover {
+                background-color: rgba(
+                    $color: $seconday-color,
+                    $alpha: 0.8
+                ) !important;
+            }
+            &:visited {
+                background-color: rgba(
+                    $color: $seconday-color,
+                    $alpha: 0.3
+                ) !important;
+            }
+        }
+    }
+}
+// END NAVBAR
+// CAROUSEL
+#carouselExampleIndicators {
+    height: 120vw !important;
+
+    img {
+        // width: 100%;
+        height: 400px;
+        object-fit: cover !important;
+    }
+    i {
+        color: $primary-color;
+        &:hover {
+            color: $seconday-color;
+        }
+    }
+}
+// END CAROUSEL
+// PRODUCT
+.product {
+    .card {
+        margin-top: 10px;
+    }
+    .background-product {
+        background-color: $primary-color;
+    }
+    .card-img-top {
+        width: 100%;
+        object-fit: cover;
+        height: 200px !important;
+    }
+    .card-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+.section-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    h3 {
+        display: inline-block !important;
+        margin: 15px;
+    }
+}
+// END PRODUCT
+// DETAIL PRODUCT
+.detail-product {
+    .icon {
+        i {
+            color: $primary-color;
+            font-size: 40px;
+        }
+    }
+}
+// END DETAIL PRODUCT
+// PAGINATION
+.wrap-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .pagination {
+        background-color: $primary-color !important;
+
+        .page-link {
+            color: $primary-color !important;
+        }
+        .page-item.active {
+            .page-link {
+                background-color: $primary-color !important;
+                color: white !important;
+            }
+        }
+    }
+}
+// END PAGINATION
+// VIDEO
+video {
+    background-color: $primary-color;
+}
+// END VIDEO
+// COUNTER
+.counter-container {
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $primary-color;
+    color: $text-color;
+    border: 1px solid white;
+    i {
+        margin-right: 10px;
+        font-size: 40px;
+        color: $seconday-color;
+    }
+    .counter {
+        color: $seconday-color;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+// END COUNTER
+.footer {
+    background-color: black;
+    padding: 40px 0;
+
+    svg {
+        color: $background-footer;
+    }
+    ul {
+        li {
+            padding: 5px;
+        }
+    }
+}
+.footer-background {
+    background: url("../images/background-footer-lg.svg");
+    background-color: black;
+    background-repeat: no-repeat;
+    color: white;
+    background-size: 100%;
+    background-position: bottom;
+}
+// GALARY
+
+.galary {
+    background: url("../images/background-galary.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 90vh;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.6fr 0.6fr 1fr;
+    grid-template-areas:
+        "mot hai ba"
+        "bon bay tam"
+        "nam bay tam"
+        "sau sau tam";
+    margin-bottom: 20px;
+    .galary-item {
+        box-shadow: 2px 4px 8px 0 rgba($color: black, $alpha: 0.3);
+        overflow: hidden;
+        &:nth-child(1) {
+            grid-area: mot;
+        }
+        &:nth-child(2) {
+            grid-area: hai;
+        }
+        &:nth-child(3) {
+            grid-area: ba;
+        }
+        &:nth-child(4) {
+            grid-area: bon;
+        }
+        &:nth-child(5) {
+            grid-area: nam;
+        }
+        &:nth-child(6) {
+            grid-area: sau;
+        }
+        &:nth-child(7) {
+            grid-area: bay;
+        }
+        &:nth-child(8) {
+            grid-area: tam;
+        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // width: 100%;
+        // height: 100%;
+    }
+}
+// END GALARY
+// FOOTER
+// END FOOTER
+// MAP
+// STYLE INLINE
+// MAP
+@media (min-width: 1200px) {
+}
+@media (min-width: 992px) {
+    // navbar
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end !important;
+        margin-right: 100px;
+    }
+    // end navbar
+    // CAROUSEL
+
+    // END CAROUSEL
+}
+// TIN TUC
+.tin-tuc {
+    .item {
+        width: 100%;
+        display: flex;
+        // padding: 5px;
+        .left {
+            width: 100px;
+            height: 100px;
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+        }
+        .right {
+            width: 100%;
+            position: relative;
+            .material-symbols-outlined {
+                color: $seconday-color;
+            }
+            h4 {
+                padding-left: 10px;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .xem-them {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                padding: 2px;
+                a {
+                    color: $seconday-color;
+                }
+            }
+        }
+    }
+}
+// FACEBOOK ZALO CALL
+
+.contact-zalo {
+    height: 35px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    bottom: 120px;
+    background-color: $seconday-color;
+    z-index: 9999;
+    border-radius: 5px;
+    a {
+        padding: 30px;
+        color: $primary-color;
+    }
+}
+
+.contact-facebook {
+    position: fixed;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 20px;
+    bottom: 75px;
+    background-color: $seconday-color;
+    z-index: 9999;
+    border-radius: 5px;
+    a {
+        padding: 30px;
+        color: $primary-color;
+    }
+}
+
+.contact-call {
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $seconday-color;
+    z-index: 9999;
+    border-radius: 5px;
+    a {
+        padding: 30px;
+        color: $primary-color;
+    }
+    i {
+        color: white;
+        padding-right: 10px;
+    }
+}
+.every-header {
+    // width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+// END FACEBOOK ZALO CALL
+@media (min-width: 876px) {
+    // CAROUSEL
+
+    // END CAROUSEL
+}
+@media (min-width: 576px) {
+    // CAROUSEL
+    #carouselExampleIndicators {
+        height: 400px !important;
+    }
+    // END CAROUSEL
+}
+@media (max-width: 576px) {
+    #carouselExampleIndicators {
+        height: 80vw !important;
+    }
+    // FOOTER
+
+    .footer-background {
+        background: url("../images/background-footer.svg");
+        background-color: black;
+        background-repeat: no-repeat;
+        color: white;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    // END FOOTER
+}
